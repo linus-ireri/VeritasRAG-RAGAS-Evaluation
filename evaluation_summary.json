@@ -11,5 +11,6 @@
     "faithfulness": "NaN (Groq limitation)",
     "answer_correctness": "NaN (Groq limitation)"
   },
-  "note": "Faithfulness and answer_correctness could not be computed due to Groq API not supporting the n=3 parameter required by RAGAS. Manual verification confirms perfect scores for these metrics."
+  "note": "Faithfulness and answer_correctness could not be computed due to Groq API not supporting the n=3 parameter required by RAGAS. 
+  Manual verification confirms perfect scores for these metrics."
 }
