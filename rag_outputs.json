@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "question": "What is the Year 1 tuition fee for BSc Computer Science at JKUAT?",
+    "answer": "The Year 1 tuition feefor the **BSc. Computer Science** programme at JKUAT is **KES 148,000** (as shown in the undergraduate fee table for Year 1).  \n\n*Source: Retrieved context #2 – “Undergraduate Programmes” fee schedule.*  \n\n*Note: All fees are subject to annual review; verify the latest amounts on the JKUAT Student Portal or with the Finance Office before payment.*",
+    "contexts": [
+      "Context #1:\nLibrary Fee1,800\nICT / Technology Fee2,500\nCaution Money (Year 1 only, refundable)5,000\nStudent ID (Year 1 only)500\nExamination Fee (per semester)4,000\nHousehold / Hostel Fee (on-campus)18,000 – 25,000\nNote: Fees are reviewed annually. Confirm the current schedule at the Finance Office or via the JKUAT Student\nPortal before making any payment.\n1.2 Postgraduate Programmes\nProgramme\nSemester 1\n(KES)\nSemester 2\n(KES)\nSemester 3\n(KES)\nMSc. Computer Science85,00080,00075,000\nMSc. Information Technology85,00080,00075,000\nMSc. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc",
+      "Context #2:\n1. Fee Structure — Selected Programmes\nThe following tables outline the annual fee structure for selected undergraduate and postgraduate\nprogrammes at JKUAT. Fees are quoted in Kenya Shillings (KES) and are subject to review by the\nUniversity Council. All fees must be paid through the University's official bank accounts or designated\nM-Pesa Paybill numbers.\n1.1 Undergraduate Programmes\nProgramme\nYear 1\n(KES)\nYear 2\n(KES)\nYear 3\n(KES)\nYear 4\n(KES)\nBSc. Computer Science148,000142,000138,000135,000\nBSc. Information Technology148,000142,000138,000135,000\nBSc. Software Engineering150,000144,000140,000137,000\nBSc",
+      "Context #3:\n. Mathematics & Computer Sci.140,000134,000129,000126,000\nBSc. Physics132,000126,000122,000119,000\nBSc. Chemistry133,000127,000123,000120,000\nAdditional Charges (All Students — Per Semester)\nItemAmount (KES)\nRegistration Fee2,000\nStudent Union Fee1,500\nMedical / Health Fee3,500"
+    ],
+    "ground_truth": "KES 148,000."
+  },
+  {
+    "id": 2,
+    "question": "What is the Year 4 tuition fee for BSc Computer Science?",
+    "answer": "**Year 4 tuition fee for BSc. Computer Science:** KES 135,000  \n\n*Source: Context #3 – “BSc. Computer Science … Year 4 (KES) 135,000”*",
+    "contexts": [
+      "Context #1:\n. Mathematics & Computer Sci.140,000134,000129,000126,000\nBSc. Physics132,000126,000122,000119,000\nBSc. Chemistry133,000127,000123,000120,000\nAdditional Charges (All Students — Per Semester)\nItemAmount (KES)\nRegistration Fee2,000\nStudent Union Fee1,500\nMedical / Health Fee3,500",
+      "Context #2:\nLibrary Fee1,800\nICT / Technology Fee2,500\nCaution Money (Year 1 only, refundable)5,000\nStudent ID (Year 1 only)500\nExamination Fee (per semester)4,000\nHousehold / Hostel Fee (on-campus)18,000 – 25,000\nNote: Fees are reviewed annually. Confirm the current schedule at the Finance Office or via the JKUAT Student\nPortal before making any payment.\n1.2 Postgraduate Programmes\nProgramme\nSemester 1\n(KES)\nSemester 2\n(KES)\nSemester 3\n(KES)\nMSc. Computer Science85,00080,00075,000\nMSc. Information Technology85,00080,00075,000\nMSc. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc",
+      "Context #3:\n1. Fee Structure — Selected Programmes\nThe following tables outline the annual fee structure for selected undergraduate and postgraduate\nprogrammes at JKUAT. Fees are quoted in Kenya Shillings (KES) and are subject to review by the\nUniversity Council. All fees must be paid through the University's official bank accounts or designated\nM-Pesa Paybill numbers.\n1.1 Undergraduate Programmes\nProgramme\nYear 1\n(KES)\nYear 2\n(KES)\nYear 3\n(KES)\nYear 4\n(KES)\nBSc. Computer Science148,000142,000138,000135,000\nBSc. Information Technology148,000142,000138,000135,000\nBSc. Software Engineering150,000144,000140,000137,000\nBSc"
+    ],
+    "ground_truth": "KES 135,000."
+  },
+  {
+    "id": 3,
+    "question": "What does a BSc Software Engineering student pay in Year 1?",
+    "answer": "A student enrolled in the**BSc Software Engineering** programme pays **KES 150,000** for **Year 1 tuition** (see Context #2, Programme table).  \n\nIn addition, all students are required to pay the following **per‑semester charges**:\n\n- Registration Fee: **KES 2,000**  \n- Student Union Fee: **KES 1,500**  - Medical / Health Fee: **KES 3,500**  \n\nThese fees are charged each semester (Context #1). Therefore, the total amount due for the first year will include the tuition fee plus the semester‑based additional charges.",
+    "contexts": [
+      "Context #1:\n. Mathematics & Computer Sci.140,000134,000129,000126,000\nBSc. Physics132,000126,000122,000119,000\nBSc. Chemistry133,000127,000123,000120,000\nAdditional Charges (All Students — Per Semester)\nItemAmount (KES)\nRegistration Fee2,000\nStudent Union Fee1,500\nMedical / Health Fee3,500",
+      "Context #2:\n1. Fee Structure — Selected Programmes\nThe following tables outline the annual fee structure for selected undergraduate and postgraduate\nprogrammes at JKUAT. Fees are quoted in Kenya Shillings (KES) and are subject to review by the\nUniversity Council. All fees must be paid through the University's official bank accounts or designated\nM-Pesa Paybill numbers.\n1.1 Undergraduate Programmes\nProgramme\nYear 1\n(KES)\nYear 2\n(KES)\nYear 3\n(KES)\nYear 4\n(KES)\nBSc. Computer Science148,000142,000138,000135,000\nBSc. Information Technology148,000142,000138,000135,000\nBSc. Software Engineering150,000144,000140,000137,000\nBSc",
+      "Context #3:\n. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc. Physics78,00074,00070,000\nMBA (Business Administration)95,00090,00085,000\nPhD (Science & Technology)110,000105,000100,000\nPhD (Engineering)115,000110,000105,000"
+    ],
+    "ground_truth": "KES 150,000."
+  },
+  {
+    "id": 4,
+    "question": "What is the Year 3 fee for BSc Software Engineering?",
+    "answer": "The Year 3 tuition fee forthe BSc Software Engineering programme is **KES 140,000**. (Source: Context #2 – “BSc. Software Engineering Year 3 (KES) 140,000”.)",
+    "contexts": [
+      "Context #1:\n. Mathematics & Computer Sci.140,000134,000129,000126,000\nBSc. Physics132,000126,000122,000119,000\nBSc. Chemistry133,000127,000123,000120,000\nAdditional Charges (All Students — Per Semester)\nItemAmount (KES)\nRegistration Fee2,000\nStudent Union Fee1,500\nMedical / Health Fee3,500",
+      "Context #2:\n1. Fee Structure — Selected Programmes\nThe following tables outline the annual fee structure for selected undergraduate and postgraduate\nprogrammes at JKUAT. Fees are quoted in Kenya Shillings (KES) and are subject to review by the\nUniversity Council. All fees must be paid through the University's official bank accounts or designated\nM-Pesa Paybill numbers.\n1.1 Undergraduate Programmes\nProgramme\nYear 1\n(KES)\nYear 2\n(KES)\nYear 3\n(KES)\nYear 4\n(KES)\nBSc. Computer Science148,000142,000138,000135,000\nBSc. Information Technology148,000142,000138,000135,000\nBSc. Software Engineering150,000144,000140,000137,000\nBSc",
+      "Context #3:\nLibrary Fee1,800\nICT / Technology Fee2,500\nCaution Money (Year 1 only, refundable)5,000\nStudent ID (Year 1 only)500\nExamination Fee (per semester)4,000\nHousehold / Hostel Fee (on-campus)18,000 – 25,000\nNote: Fees are reviewed annually. Confirm the current schedule at the Finance Office or via the JKUAT Student\nPortal before making any payment.\n1.2 Postgraduate Programmes\nProgramme\nSemester 1\n(KES)\nSemester 2\n(KES)\nSemester 3\n(KES)\nMSc. Computer Science85,00080,00075,000\nMSc. Information Technology85,00080,00075,000\nMSc. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc"
+    ],
+    "ground_truth": "KES 140,000."
+  },
+  {
+    "id": 5,
+    "question": "How much does a Year 1 BSc Mathematics and Computer Science student pay?",
+    "answer": "A Year 1 BSc Mathematics and Computer Science student pays **KES 140,000** for the first year. (Source: Context #1 – “Mathematics & Computer Sci 140,000…”)",
+    "contexts": [
+      "Context #1:\n. Mathematics & Computer Sci.140,000134,000129,000126,000\nBSc. Physics132,000126,000122,000119,000\nBSc. Chemistry133,000127,000123,000120,000\nAdditional Charges (All Students — Per Semester)\nItemAmount (KES)\nRegistration Fee2,000\nStudent Union Fee1,500\nMedical / Health Fee3,500",
+      "Context #2:\n. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc. Physics78,00074,00070,000\nMBA (Business Administration)95,00090,00085,000\nPhD (Science & Technology)110,000105,000100,000\nPhD (Engineering)115,000110,000105,000",
+      "Context #3:\n1. Fee Structure — Selected Programmes\nThe following tables outline the annual fee structure for selected undergraduate and postgraduate\nprogrammes at JKUAT. Fees are quoted in Kenya Shillings (KES) and are subject to review by the\nUniversity Council. All fees must be paid through the University's official bank accounts or designated\nM-Pesa Paybill numbers.\n1.1 Undergraduate Programmes\nProgramme\nYear 1\n(KES)\nYear 2\n(KES)\nYear 3\n(KES)\nYear 4\n(KES)\nBSc. Computer Science148,000142,000138,000135,000\nBSc. Information Technology148,000142,000138,000135,000\nBSc. Software Engineering150,000144,000140,000137,000\nBSc"
+    ],
+    "ground_truth": "KES 140,000."
+  },
+  {
+    "id": 21,
+    "question": "Does JKUAT offer a BSc in Information Technology?",
+    "answer": "Yes. JKUAT offers a **BSc in Information Technology** (see Context #2, “Undergraduate Programmes” table, which lists “BSc. Information Technology” under Year 1–4 fee schedules).",
+    "contexts": [
+      "Context #1:\nLibrary Fee1,800\nICT / Technology Fee2,500\nCaution Money (Year 1 only, refundable)5,000\nStudent ID (Year 1 only)500\nExamination Fee (per semester)4,000\nHousehold / Hostel Fee (on-campus)18,000 – 25,000\nNote: Fees are reviewed annually. Confirm the current schedule at the Finance Office or via the JKUAT Student\nPortal before making any payment.\n1.2 Postgraduate Programmes\nProgramme\nSemester 1\n(KES)\nSemester 2\n(KES)\nSemester 3\n(KES)\nMSc. Computer Science85,00080,00075,000\nMSc. Information Technology85,00080,00075,000\nMSc. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc",
+      "Context #2:\n1. Fee Structure — Selected Programmes\nThe following tables outline the annual fee structure for selected undergraduate and postgraduate\nprogrammes at JKUAT. Fees are quoted in Kenya Shillings (KES) and are subject to review by the\nUniversity Council. All fees must be paid through the University's official bank accounts or designated\nM-Pesa Paybill numbers.\n1.1 Undergraduate Programmes\nProgramme\nYear 1\n(KES)\nYear 2\n(KES)\nYear 3\n(KES)\nYear 4\n(KES)\nBSc. Computer Science148,000142,000138,000135,000\nBSc. Information Technology148,000142,000138,000135,000\nBSc. Software Engineering150,000144,000140,000137,000\nBSc",
+      "Context #3:\nwill be sent by 15 June 2026.\n• Full paper submission deadline: 25 June 2026 (for inclusion in the conference proceedings).\n• Registration fee: KES 5,000 for students; KES 12,000 for faculty; USD 100 for international\nparticipants.\n• Virtual attendance option available via the JKUAT e-Conference platform for registered participants\nunable to attend physically.\nNote: For more details, visit the conference website or contact the Department of Mathematics, College of Pure and\nApplied Sciences, JKUAT Main Campus, P.O"
+    ],
+    "ground_truth": "Yes. Year 1 fee is KES 148,000."
+  },
+  {
+    "id": 22,
+    "question": "Does JKUAT offer a BSc in Architecture?",
+    "answer": "I’m sorry, but the information I have does not include a Bachelor of Science in Architecture as one of the programmes offered at JKUAT. If you would like confirmation about the availability of an Architecture programme, I recommend checking JKUAT’s official website or contacting the University’s admissions or academic office directly.",
+    "contexts": [
+      "Context #1:\nLibrary Fee1,800\nICT / Technology Fee2,500\nCaution Money (Year 1 only, refundable)5,000\nStudent ID (Year 1 only)500\nExamination Fee (per semester)4,000\nHousehold / Hostel Fee (on-campus)18,000 – 25,000\nNote: Fees are reviewed annually. Confirm the current schedule at the Finance Office or via the JKUAT Student\nPortal before making any payment.\n1.2 Postgraduate Programmes\nProgramme\nSemester 1\n(KES)\nSemester 2\n(KES)\nSemester 3\n(KES)\nMSc. Computer Science85,00080,00075,000\nMSc. Information Technology85,00080,00075,000\nMSc. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc",
+      "Context #2:\n1. Fee Structure — Selected Programmes\nThe following tables outline the annual fee structure for selected undergraduate and postgraduate\nprogrammes at JKUAT. Fees are quoted in Kenya Shillings (KES) and are subject to review by the\nUniversity Council. All fees must be paid through the University's official bank accounts or designated\nM-Pesa Paybill numbers.\n1.1 Undergraduate Programmes\nProgramme\nYear 1\n(KES)\nYear 2\n(KES)\nYear 3\n(KES)\nYear 4\n(KES)\nBSc. Computer Science148,000142,000138,000135,000\nBSc. Information Technology148,000142,000138,000135,000\nBSc. Software Engineering150,000144,000140,000137,000\nBSc",
+      "Context #3:\nwill be sent by 15 June 2026.\n• Full paper submission deadline: 25 June 2026 (for inclusion in the conference proceedings).\n• Registration fee: KES 5,000 for students; KES 12,000 for faculty; USD 100 for international\nparticipants.\n• Virtual attendance option available via the JKUAT e-Conference platform for registered participants\nunable to attend physically.\nNote: For more details, visit the conference website or contact the Department of Mathematics, College of Pure and\nApplied Sciences, JKUAT Main Campus, P.O"
+    ],
+    "ground_truth": "Yes. Year 1 fee is KES 158,000."
+  },
+  {
+    "id": 23,
+    "question": "What is the Year 1 fee for BBM (Business Management)?",
+    "answer": "I don't have enough informationabout the Year 1 fee for BBM (Business Management) in the provided context. For accurate fee details, please consult JKUAT’s official website or contact the Finance Office/Student Portal.",
+    "contexts": [
+      "Context #1:\n. Mathematics & Computer Sci.140,000134,000129,000126,000\nBSc. Physics132,000126,000122,000119,000\nBSc. Chemistry133,000127,000123,000120,000\nAdditional Charges (All Students — Per Semester)\nItemAmount (KES)\nRegistration Fee2,000\nStudent Union Fee1,500\nMedical / Health Fee3,500",
+      "Context #2:\n1. Fee Structure — Selected Programmes\nThe following tables outline the annual fee structure for selected undergraduate and postgraduate\nprogrammes at JKUAT. Fees are quoted in Kenya Shillings (KES) and are subject to review by the\nUniversity Council. All fees must be paid through the University's official bank accounts or designated\nM-Pesa Paybill numbers.\n1.1 Undergraduate Programmes\nProgramme\nYear 1\n(KES)\nYear 2\n(KES)\nYear 3\n(KES)\nYear 4\n(KES)\nBSc. Computer Science148,000142,000138,000135,000\nBSc. Information Technology148,000142,000138,000135,000\nBSc. Software Engineering150,000144,000140,000137,000\nBSc",
+      "Context #3:\nLibrary Fee1,800\nICT / Technology Fee2,500\nCaution Money (Year 1 only, refundable)5,000\nStudent ID (Year 1 only)500\nExamination Fee (per semester)4,000\nHousehold / Hostel Fee (on-campus)18,000 – 25,000\nNote: Fees are reviewed annually. Confirm the current schedule at the Finance Office or via the JKUAT Student\nPortal before making any payment.\n1.2 Postgraduate Programmes\nProgramme\nSemester 1\n(KES)\nSemester 2\n(KES)\nSemester 3\n(KES)\nMSc. Computer Science85,00080,00075,000\nMSc. Information Technology85,00080,00075,000\nMSc. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc"
+    ],
+    "ground_truth": "KES 120,000."
+  },
+  {
+    "id": 24,
+    "question": "What is the Year 1 fee for BEd Science?",
+    "answer": "I don't have enough information about that in my knowledge base. You may contact JKUAT’s official channels, such as the Finance Office or the university’s website, for details on the Year 1 fee for the BEd Science programme.",
+    "contexts": [
+      "Context #1:\n. Mathematics & Computer Sci.140,000134,000129,000126,000\nBSc. Physics132,000126,000122,000119,000\nBSc. Chemistry133,000127,000123,000120,000\nAdditional Charges (All Students — Per Semester)\nItemAmount (KES)\nRegistration Fee2,000\nStudent Union Fee1,500\nMedical / Health Fee3,500",
+      "Context #2:\n6. Key Academic Deadlines — Quick Reference\nActivityDeadline / PeriodResponsible Office\nSession ReportingBy end of Week 1 of semesterAcademic Registrar\nUnit RegistrationBy end of Week 4 of semesterAcademic Registrar\nMinimum Fee Payment (75%)Before unit registrationFinance Office\nHousehold Fee ClearanceBefore examinations commenceHostels & Accommodation\nCATs / Continuous AssessmentsAs per Department scheduleRespective Department\nExamination PeriodAs per official timetableExaminations Office\nSupplementary Exam ApplicationsWithin 2 weeks after resultsFaculty Dean's Office\nTranscript RequestsAnytime (allow 5–10 working days)Academic Registrar",
+      "Context #3:\nLibrary Fee1,800\nICT / Technology Fee2,500\nCaution Money (Year 1 only, refundable)5,000\nStudent ID (Year 1 only)500\nExamination Fee (per semester)4,000\nHousehold / Hostel Fee (on-campus)18,000 – 25,000\nNote: Fees are reviewed annually. Confirm the current schedule at the Finance Office or via the JKUAT Student\nPortal before making any payment.\n1.2 Postgraduate Programmes\nProgramme\nSemester 1\n(KES)\nSemester 2\n(KES)\nSemester 3\n(KES)\nMSc. Computer Science85,00080,00075,000\nMSc. Information Technology85,00080,00075,000\nMSc. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc"
+    ],
+    "ground_truth": "KES 118,000."
+  },
+  {
+    "id": 25,
+    "question": "What is the Year 2 fee for BSc Agriculture?",
+    "answer": "I don't have enoughinformation about the Year 2 fee for BSc Agriculture in the provided context. For the most accurate details, please consult JKUAT’s official fee schedule or contact the university’s Finance Office.",
+    "contexts": [
+      "Context #1:\n. Mathematics & Computer Sci.140,000134,000129,000126,000\nBSc. Physics132,000126,000122,000119,000\nBSc. Chemistry133,000127,000123,000120,000\nAdditional Charges (All Students — Per Semester)\nItemAmount (KES)\nRegistration Fee2,000\nStudent Union Fee1,500\nMedical / Health Fee3,500",
+      "Context #2:\n1. Fee Structure — Selected Programmes\nThe following tables outline the annual fee structure for selected undergraduate and postgraduate\nprogrammes at JKUAT. Fees are quoted in Kenya Shillings (KES) and are subject to review by the\nUniversity Council. All fees must be paid through the University's official bank accounts or designated\nM-Pesa Paybill numbers.\n1.1 Undergraduate Programmes\nProgramme\nYear 1\n(KES)\nYear 2\n(KES)\nYear 3\n(KES)\nYear 4\n(KES)\nBSc. Computer Science148,000142,000138,000135,000\nBSc. Information Technology148,000142,000138,000135,000\nBSc. Software Engineering150,000144,000140,000137,000\nBSc",
+      "Context #3:\nLibrary Fee1,800\nICT / Technology Fee2,500\nCaution Money (Year 1 only, refundable)5,000\nStudent ID (Year 1 only)500\nExamination Fee (per semester)4,000\nHousehold / Hostel Fee (on-campus)18,000 – 25,000\nNote: Fees are reviewed annually. Confirm the current schedule at the Finance Office or via the JKUAT Student\nPortal before making any payment.\n1.2 Postgraduate Programmes\nProgramme\nSemester 1\n(KES)\nSemester 2\n(KES)\nSemester 3\n(KES)\nMSc. Computer Science85,00080,00075,000\nMSc. Information Technology85,00080,00075,000\nMSc. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc"
+    ],
+    "ground_truth": "KES 129,000."
+  },
+  {
+    "id": 41,
+    "question": "What is the deadline for session reporting at JKUAT?",
+    "answer": "The deadlinefor session reporting is **before the end of the first week of each semester** (as stipulated in the Session Reporting Guidelines).",
+    "contexts": [
+      "Context #1:\n2. Session Reporting Guidelines\nSession reporting is the formal process by which a student confirms their continued enrolment in a given\nsemester. It is mandatory for all registered JKUAT students, including those on attachment or special\nprogrammes.\nn DEADLINE: Session reporting must be completed before the end of the FIRST WEEK of\nevery semester",
+      "Context #2:\n. Failure to session-report by this deadline will result in the student being marked\nabsent for that semester and may lead to academic suspension.\n2.1 How to Session Report\nStep 1\nLog in to the JKUAT Student Portal at portal.jkuat.ac.ke using your registration number\nand password.\nStep 2\nNavigate to Academics → Session Reporting from the main menu.\nStep 3\nSelect the current academic year and semester.\nStep 4\nVerify that your personal details and programme information are correct. Report any\ndiscrepancies to the Registrar's Office immediately.\nStep 5\nClick 'Confirm Session Report'",
+      "Context #3:\nwill be sent by 15 June 2026.\n• Full paper submission deadline: 25 June 2026 (for inclusion in the conference proceedings).\n• Registration fee: KES 5,000 for students; KES 12,000 for faculty; USD 100 for international\nparticipants.\n• Virtual attendance option available via the JKUAT e-Conference platform for registered participants\nunable to attend physically.\nNote: For more details, visit the conference website or contact the Department of Mathematics, College of Pure and\nApplied Sciences, JKUAT Main Campus, P.O"
+    ],
+    "ground_truth": "By the end of the first week of every semester."
+  },
+  {
+    "id": 42,
+    "question": "What happens if a student does not session report by the deadline?",
+    "answer": "If a studentfails to submit the session report by the deadline, the student will be marked absent for that semester, and the university may place the student on academic suspension.",
+    "contexts": [
+      "Context #1:\n. Failure to session-report by this deadline will result in the student being marked\nabsent for that semester and may lead to academic suspension.\n2.1 How to Session Report\nStep 1\nLog in to the JKUAT Student Portal at portal.jkuat.ac.ke using your registration number\nand password.\nStep 2\nNavigate to Academics → Session Reporting from the main menu.\nStep 3\nSelect the current academic year and semester.\nStep 4\nVerify that your personal details and programme information are correct. Report any\ndiscrepancies to the Registrar's Office immediately.\nStep 5\nClick 'Confirm Session Report'",
+      "Context #2:\n2. Session Reporting Guidelines\nSession reporting is the formal process by which a student confirms their continued enrolment in a given\nsemester. It is mandatory for all registered JKUAT students, including those on attachment or special\nprogrammes.\nn DEADLINE: Session reporting must be completed before the end of the FIRST WEEK of\nevery semester",
+      "Context #3:\n. A confirmation message and reference number will be\ndisplayed and emailed to your university email address.\nStep 6\nPrint or save a copy of the session report confirmation for your records.\n2.2 Important Reminders\n• Session reporting is available online from the first day of each semester.\n• Students on academic leave or deferred study must also session-report to confirm return.\n• Manual session reporting at the Registrar's Office is available for students with portal access issues.\n• Session reporting does not replace unit registration; both must be completed independently."
+    ],
+    "ground_truth": "The student is marked absent for that semester and may face academic suspension. 3"
+  },
+  {
+    "id": 43,
+    "question": "Where does a student go to complete session reporting?",
+    "answer": "To complete session reporting, a student must log in to the **JKUAT Student Portal (portal.jkuat.ac.ke)** and then navigate to **Academics → Session Reporting** in the main menu (see Context #3). After selecting the current academic year and semester, they can verify their details and click “Confirm Session Report.”",
+    "contexts": [
+      "Context #1:\n. A confirmation message and reference number will be\ndisplayed and emailed to your university email address.\nStep 6\nPrint or save a copy of the session report confirmation for your records.\n2.2 Important Reminders\n• Session reporting is available online from the first day of each semester.\n• Students on academic leave or deferred study must also session-report to confirm return.\n• Manual session reporting at the Registrar's Office is available for students with portal access issues.\n• Session reporting does not replace unit registration; both must be completed independently.",
+      "Context #2:\n2. Session Reporting Guidelines\nSession reporting is the formal process by which a student confirms their continued enrolment in a given\nsemester. It is mandatory for all registered JKUAT students, including those on attachment or special\nprogrammes.\nn DEADLINE: Session reporting must be completed before the end of the FIRST WEEK of\nevery semester",
+      "Context #3:\n. Failure to session-report by this deadline will result in the student being marked\nabsent for that semester and may lead to academic suspension.\n2.1 How to Session Report\nStep 1\nLog in to the JKUAT Student Portal at portal.jkuat.ac.ke using your registration number\nand password.\nStep 2\nNavigate to Academics → Session Reporting from the main menu.\nStep 3\nSelect the current academic year and semester.\nStep 4\nVerify that your personal details and programme information are correct. Report any\ndiscrepancies to the Registrar's Office immediately.\nStep 5\nClick 'Confirm Session Report'"
+    ],
+    "ground_truth": "The JKUAT Student Portal at portal.jkuat.ac.ke, under Academics then Session Re- porting."
+  },
+  {
+    "id": 44,
+    "question": "Is session reporting mandatory for students on attachment?",
+    "answer": "Yes. According to the Session ReportingGuidelines, session reporting is mandatory for all registered JKUAT students, including those on attachment or special programmes [Context 1].",
+    "contexts": [
+      "Context #1:\n2. Session Reporting Guidelines\nSession reporting is the formal process by which a student confirms their continued enrolment in a given\nsemester. It is mandatory for all registered JKUAT students, including those on attachment or special\nprogrammes.\nn DEADLINE: Session reporting must be completed before the end of the FIRST WEEK of\nevery semester",
+      "Context #2:\n. A confirmation message and reference number will be\ndisplayed and emailed to your university email address.\nStep 6\nPrint or save a copy of the session report confirmation for your records.\n2.2 Important Reminders\n• Session reporting is available online from the first day of each semester.\n• Students on academic leave or deferred study must also session-report to confirm return.\n• Manual session reporting at the Registrar's Office is available for students with portal access issues.\n• Session reporting does not replace unit registration; both must be completed independently.",
+      "Context #3:\n. Failure to session-report by this deadline will result in the student being marked\nabsent for that semester and may lead to academic suspension.\n2.1 How to Session Report\nStep 1\nLog in to the JKUAT Student Portal at portal.jkuat.ac.ke using your registration number\nand password.\nStep 2\nNavigate to Academics → Session Reporting from the main menu.\nStep 3\nSelect the current academic year and semester.\nStep 4\nVerify that your personal details and programme information are correct. Report any\ndiscrepancies to the Registrar's Office immediately.\nStep 5\nClick 'Confirm Session Report'"
+    ],
+    "ground_truth": "Yes. It is mandatory for all registered students including those on attachment or special programmes."
+  },
+  {
+    "id": 45,
+    "question": "What is the unit registration deadline at JKUAT?",
+    "answer": "**Unit registration deadline:** All unit registrations must be completed **before the end of the fourth (4th) week of the semester**. Late registration is not permitted after that date unless special approval is obtained from the Dean of the relevant Faculty【Context #3】.",
+    "contexts": [
+      "Context #1:\nwill be sent by 15 June 2026.\n• Full paper submission deadline: 25 June 2026 (for inclusion in the conference proceedings).\n• Registration fee: KES 5,000 for students; KES 12,000 for faculty; USD 100 for international\nparticipants.\n• Virtual attendance option available via the JKUAT e-Conference platform for registered participants\nunable to attend physically.\nNote: For more details, visit the conference website or contact the Department of Mathematics, College of Pure and\nApplied Sciences, JKUAT Main Campus, P.O",
+      "Context #2:\n. The system will automatically block unit registration for any student whose fee payment is\nbelow this threshold. Part-payment arrangements below 75% will not be accepted as a basis for unit\nregistration.\n3.2 Step-by-Step Unit Registration\nStep 1\nEnsure your semester fees are at least 75% paid. Check your fee balance on the Student\nPortal under Finance → Fee Statement.\nStep 2\nLog in to the JKUAT Student Portal and navigate to Academics → Unit Registration.\nStep 3\nSelect the current academic year, semester, and your programme.\nStep 4\nA list of recommended units based on your programme and year of study will appear",
+      "Context #3:\n3. Unit Registration Procedure\nUnit registration is the process of enrolling in specific course units for a given semester. Only registered\nunits will appear in your official academic transcript and examination schedule.\nn DEADLINE: All unit registrations must be completed before the end of the FOURTH (4th)\nWEEK of the semester. Late registration will not be permitted after this date without special\napproval from the Dean of the relevant Faculty.\n3.1 Fee Payment Requirement Before Unit Registration\nn MANDATORY FEE PAYMENT THRESHOLD:\nA student must have paid a minimum of 75% of the total semester fees before they can register\nunits"
+    ],
+    "ground_truth": "By the end of the fourth week of the semester."
+  },
+  {
+    "id": 61,
+    "question": "Will a student who has not cleared household fees be allowed to sit exams?",
+    "answer": "No. According to the Examination Regulations (Context #1) and the clearance requirement (Context #3), a student who has not cleared the household (hostel) fee is **not permitted** to sit for any university examinations for that semester. They must obtain a clearance slip from the Hostels & Accommodation Office before they can register for exams.",
+    "contexts": [
+      "Context #1:\n5. Examination Regulations & Fee Clearance\nJKUAT maintains strict regulations governing student eligibility to sit for end-of-semester examinations.\nStudents must satisfy all the conditions below before being permitted into the examination room.\n5.1 Household Fee Clearance\nn CRITICAL REGULATION — HOUSEHOLD FEE:\nA student who has not cleared their Household Fee (hostel / accommodation fee) in full will\nNOT be permitted to sit for any University examinations for that semester.\nThis regulation applies to all students residing in JKUAT-managed accommodation",
+      "Context #2:\n10\nHousehold Fee Clearance Pending\nOn-campus students with outstanding household (hostel) fees may face restrictions. Settle the hostel\nfee and obtain a clearance slip from the Hostels & Accommodation Office.\nn If none of the above reasons apply and you still cannot register, proceed to the Academic\nRegistrar's Office with your student ID and fee receipt for manual assistance.",
+      "Context #3:\n. Clearance must\nbe obtained from the Hostels & Accommodation Office and a clearance slip must be presented at\nthe examination venue together with the student identity card and unit registration card.\n5.2 General Examination Eligibility Requirements\n• Completed session reporting for the current semester.\n• Registered all units for which examinations are to be sat.\n• Attained a minimum class attendance of 75% for each registered unit.\n• Cleared all outstanding household / hostel fees (for on-campus students).\n• Submitted all continuous assessment tests (CATs) and assignments as required by the relevant\nDepartment.\n• Presented a valid Student Identity Card at the examination hall."
+    ],
+    "ground_truth": "No. Students who have not cleared household/hostel fees in full will not be permitted to sit any University examinations for that semester."
+  },
+  {
+    "id": 62,
+    "question": "What is the minimum class attendance required to sit examinations?",
+    "answer": "The minimum class attendance required is **75 %** for each registered unit【Context #1】.",
+    "contexts": [
+      "Context #1:\n. Clearance must\nbe obtained from the Hostels & Accommodation Office and a clearance slip must be presented at\nthe examination venue together with the student identity card and unit registration card.\n5.2 General Examination Eligibility Requirements\n• Completed session reporting for the current semester.\n• Registered all units for which examinations are to be sat.\n• Attained a minimum class attendance of 75% for each registered unit.\n• Cleared all outstanding household / hostel fees (for on-campus students).\n• Submitted all continuous assessment tests (CATs) and assignments as required by the relevant\nDepartment.\n• Presented a valid Student Identity Card at the examination hall.",
+      "Context #2:\n5. Examination Regulations & Fee Clearance\nJKUAT maintains strict regulations governing student eligibility to sit for end-of-semester examinations.\nStudents must satisfy all the conditions below before being permitted into the examination room.\n5.1 Household Fee Clearance\nn CRITICAL REGULATION — HOUSEHOLD FEE:\nA student who has not cleared their Household Fee (hostel / accommodation fee) in full will\nNOT be permitted to sit for any University examinations for that semester.\nThis regulation applies to all students residing in JKUAT-managed accommodation",
+      "Context #3:\ned by the relevant\nDepartment.\n• Presented a valid Student Identity Card at the examination hall.\n• Cleared any library fines or outstanding obligations as required.\n5.3 Consequences of Non-Compliance\nA student who does not meet the above requirements will be denied entry to the examination hall"
+    ],
+    "ground_truth": "75% for each registered unit."
+  },
+  {
+    "id": 63,
+    "question": "What documents must a student present at the examination hall?",
+    "answer": "A student mustpresent the following at the examination hall:\n\n- **Valid Student Identity Card** – required for entry into the examination venue.  \n- **Unit Registration Card** – the registration document for the units being examined.  \n- **Clearance Slip** – obtained from the Hostels & Accommodation Office after clearing any hostel or household fees and meeting other clearance requirements.  \n\nThese items are specified in the eligibility and presentation requirements for the examination.",
+    "contexts": [
+      "Context #1:\ned by the relevant\nDepartment.\n• Presented a valid Student Identity Card at the examination hall.\n• Cleared any library fines or outstanding obligations as required.\n5.3 Consequences of Non-Compliance\nA student who does not meet the above requirements will be denied entry to the examination hall",
+      "Context #2:\n. Clearance must\nbe obtained from the Hostels & Accommodation Office and a clearance slip must be presented at\nthe examination venue together with the student identity card and unit registration card.\n5.2 General Examination Eligibility Requirements\n• Completed session reporting for the current semester.\n• Registered all units for which examinations are to be sat.\n• Attained a minimum class attendance of 75% for each registered unit.\n• Cleared all outstanding household / hostel fees (for on-campus students).\n• Submitted all continuous assessment tests (CATs) and assignments as required by the relevant\nDepartment.\n• Presented a valid Student Identity Card at the examination hall.",
+      "Context #3:\n. A confirmation message and reference number will be\ndisplayed and emailed to your university email address.\nStep 6\nPrint or save a copy of the session report confirmation for your records.\n2.2 Important Reminders\n• Session reporting is available online from the first day of each semester.\n• Students on academic leave or deferred study must also session-report to confirm return.\n• Manual session reporting at the Registrar's Office is available for students with portal access issues.\n• Session reporting does not replace unit registration; both must be completed independently."
+    ],
+    "ground_truth": "A valid Student Identity Card, unit registration card, and for on-campus students a household fee clearance slip."
+  },
+  {
+    "id": 64,
+    "question": "What grade is awarded to a student denied entry to an examination?",
+    "answer": "A student who is denied entryto an examination will be awarded a grade of **IC (Incomplete) or AB (Absent)** – which may later be recorded as a fail grade if not resolved 【Context #2】.",
+    "contexts": [
+      "Context #1:\ned by the relevant\nDepartment.\n• Presented a valid Student Identity Card at the examination hall.\n• Cleared any library fines or outstanding obligations as required.\n5.3 Consequences of Non-Compliance\nA student who does not meet the above requirements will be denied entry to the examination hall",
+      "Context #2:\n. Such a\nstudent will be awarded a grade of IC (Incomplete) or AB (Absent), which may lead to a fail grade upon\nprocessing. Supplementary or special examinations may be applied for through the Dean's Office in\naccordance with the University's Academic Policy.",
+      "Context #3:\n. Clearance must\nbe obtained from the Hostels & Accommodation Office and a clearance slip must be presented at\nthe examination venue together with the student identity card and unit registration card.\n5.2 General Examination Eligibility Requirements\n• Completed session reporting for the current semester.\n• Registered all units for which examinations are to be sat.\n• Attained a minimum class attendance of 75% for each registered unit.\n• Cleared all outstanding household / hostel fees (for on-campus students).\n• Submitted all continuous assessment tests (CATs) and assignments as required by the relevant\nDepartment.\n• Presented a valid Student Identity Card at the examination hall."
+    ],
+    "ground_truth": "A grade of IC (Incomplete) or AB (Absent), which may lead to a fail grade upon processing."
+  },
+  {
+    "id": 65,
+    "question": "Where does a student obtain household fee clearance?",
+    "answer": "A student must obtain the household‑fee clearance slip from the **Hostels & Accommodation Office**. The clearance slip must then be presented (along with the student identity and unit registration cards) at the examination venue. [Context #1; Context #3]",
+    "contexts": [
+      "Context #1:\n10\nHousehold Fee Clearance Pending\nOn-campus students with outstanding household (hostel) fees may face restrictions. Settle the hostel\nfee and obtain a clearance slip from the Hostels & Accommodation Office.\nn If none of the above reasons apply and you still cannot register, proceed to the Academic\nRegistrar's Office with your student ID and fee receipt for manual assistance.",
+      "Context #2:\n5. Examination Regulations & Fee Clearance\nJKUAT maintains strict regulations governing student eligibility to sit for end-of-semester examinations.\nStudents must satisfy all the conditions below before being permitted into the examination room.\n5.1 Household Fee Clearance\nn CRITICAL REGULATION — HOUSEHOLD FEE:\nA student who has not cleared their Household Fee (hostel / accommodation fee) in full will\nNOT be permitted to sit for any University examinations for that semester.\nThis regulation applies to all students residing in JKUAT-managed accommodation",
+      "Context #3:\n. Clearance must\nbe obtained from the Hostels & Accommodation Office and a clearance slip must be presented at\nthe examination venue together with the student identity card and unit registration card.\n5.2 General Examination Eligibility Requirements\n• Completed session reporting for the current semester.\n• Registered all units for which examinations are to be sat.\n• Attained a minimum class attendance of 75% for each registered unit.\n• Cleared all outstanding household / hostel fees (for on-campus students).\n• Submitted all continuous assessment tests (CATs) and assignments as required by the relevant\nDepartment.\n• Presented a valid Student Identity Card at the examination hall."
+    ],
+    "ground_truth": "From the Hostels and Accommodation Office."
+  },
+  {
+    "id": 81,
+    "question": "When is ICMPS 2026 taking place?",
+    "answer": "ICMPS 2026 is scheduled for **6 – 7 July 2026** at JKUAT’s Main Campus (Juja). This is based on the “Upcoming University Events” listing that outlines the conference dates and schedule【1†Context #1】.",
+    "contexts": [
+      "Context #1:\n7. Upcoming University Events\nJKUAT regularly hosts international academic conferences, workshops, and seminars that bring together\nscholars, researchers, and industry professionals. Students and faculty are encouraged to participate\nactively in these events to foster academic excellence and networking.\n2nd International Conference on Mathematics and\nPhysical Sciences\nICMPS 2026\n6th – 7th July 2026 | JKUAT Main Campus, Juja\n7.1 Conference Overview\nThe 2nd International Conference on Mathematics and Physical Sciences (ICMPS 2026) is a prestigious\nbiennial event hosted by the JKUAT College of Pure and Applied Sciences",
+      "Context #2:\n. The conference brings\ntogether mathematicians, physicists, chemists, statisticians, and data scientists from across Africa and the\nworld to share cutting-edge research, forge collaborations, and advance the frontiers of knowledge in the\nmathematical and physical sciences.\n7.2 Conference Schedule — July 2026\nDateTimeActivityVenue\nSunday, 6 July 202608:00 – 09:30Registration & Welcome CoffeeJKUAT Conference Centre, Foyer\nSunday, 6 July 202609:30 – 10:30Opening Ceremony & Keynote Address IMain Auditorium\nSunday, 6 July 202610:30 – 13:00Parallel Technical Sessions — Day 1ALecture Theatres A, B, C\nSunday, 6 July 202613:00 – 14:00Lunch & NetworkingUniversity Cafeteria\nSunday, 6 July 202614:00",
+      "Context #3:\nB, C\nSunday, 6 July 202613:00 – 14:00Lunch & NetworkingUniversity Cafeteria\nSunday, 6 July 202614:00 – 17:00Parallel Technical Sessions — Day 1BLecture Theatres A, B, C\nSunday, 6 July 202617:00 – 18:00Poster Session & ExhibitionConference Exhibition Hall\nSunday, 6 July 202619:00 – 21:00Gala Dinner & Cultural EveningJKUAT Gardens\nMonday, 7 July 202608:30 – 09:30Keynote Address II & Plenary PanelMain Auditorium\nMonday, 7 July 202609:30 – 13:00Parallel Technical Sessions — Day 2ALecture Theatres A, B, C\nMonday, 7 July 202613:00 – 14:00Lunch & NetworkingUniversity Cafeteria\nMonday, 7 July 202614:00 – 16:00Special Workshop: AI in SciencesComputer Lab 3\nMonday, 7 July 202616:00 – 17:00Awards Cerem"
+    ],
+    "ground_truth": "6th and 7th July 2026 at JKUAT Main Campus, Juja."
+  },
+  {
+    "id": 82,
+    "question": "What is the abstract submission deadline for ICMPS 2026?",
+    "answer": "The abstract must be submitted **by 30 May 2026** (see Context #1, “Abstract submission: Submit a 250–350‑word abstract … by 30 May 2026”).",
+    "contexts": [
+      "Context #1:\nMonday, 7 July 202617:00 – 17:30Closing CeremonyMain Auditorium\n7.3 Thematic Areas\nPure and Applied MathematicsMathematical Modelling and Simulation\nStatistics and Data ScienceTheoretical and Experimental Physics\nQuantum Computing and Information ScienceAstrophysics and Space Sciences\nComputational ChemistryEnvironmental Physics and Climate Modelling\nArtificial Intelligence Applications in SciencesMathematics Education and Curriculum Development\n7.4 How to Participate\n• Abstract submission: Submit a 250–350-word abstract to icmps2026@jkuat.ac.ke by 30 May\n2026.\n• Notification of acceptance will be sent by 15 June 2026.\n• Full paper submission deadline: 25 June 2026 (for inclusion in th",
+      "Context #2:\n. The conference brings\ntogether mathematicians, physicists, chemists, statisticians, and data scientists from across Africa and the\nworld to share cutting-edge research, forge collaborations, and advance the frontiers of knowledge in the\nmathematical and physical sciences.\n7.2 Conference Schedule — July 2026\nDateTimeActivityVenue\nSunday, 6 July 202608:00 – 09:30Registration & Welcome CoffeeJKUAT Conference Centre, Foyer\nSunday, 6 July 202609:30 – 10:30Opening Ceremony & Keynote Address IMain Auditorium\nSunday, 6 July 202610:30 – 13:00Parallel Technical Sessions — Day 1ALecture Theatres A, B, C\nSunday, 6 July 202613:00 – 14:00Lunch & NetworkingUniversity Cafeteria\nSunday, 6 July 202614:00",
+      "Context #3:\n7. Upcoming University Events\nJKUAT regularly hosts international academic conferences, workshops, and seminars that bring together\nscholars, researchers, and industry professionals. Students and faculty are encouraged to participate\nactively in these events to foster academic excellence and networking.\n2nd International Conference on Mathematics and\nPhysical Sciences\nICMPS 2026\n6th – 7th July 2026 | JKUAT Main Campus, Juja\n7.1 Conference Overview\nThe 2nd International Conference on Mathematics and Physical Sciences (ICMPS 2026) is a prestigious\nbiennial event hosted by the JKUAT College of Pure and Applied Sciences"
+    ],
+    "ground_truth": "30 May 2026."
+  },
+  {
+    "id": 83,
+    "question": "What is the full paper submission deadline for ICMPS 2026?",
+    "answer": "The full paper submissiondeadline for ICMPS 2026 is **25 June 2026**.   (Context 3)",
+    "contexts": [
+      "Context #1:\n. The conference brings\ntogether mathematicians, physicists, chemists, statisticians, and data scientists from across Africa and the\nworld to share cutting-edge research, forge collaborations, and advance the frontiers of knowledge in the\nmathematical and physical sciences.\n7.2 Conference Schedule — July 2026\nDateTimeActivityVenue\nSunday, 6 July 202608:00 – 09:30Registration & Welcome CoffeeJKUAT Conference Centre, Foyer\nSunday, 6 July 202609:30 – 10:30Opening Ceremony & Keynote Address IMain Auditorium\nSunday, 6 July 202610:30 – 13:00Parallel Technical Sessions — Day 1ALecture Theatres A, B, C\nSunday, 6 July 202613:00 – 14:00Lunch & NetworkingUniversity Cafeteria\nSunday, 6 July 202614:00",
+      "Context #2:\n7. Upcoming University Events\nJKUAT regularly hosts international academic conferences, workshops, and seminars that bring together\nscholars, researchers, and industry professionals. Students and faculty are encouraged to participate\nactively in these events to foster academic excellence and networking.\n2nd International Conference on Mathematics and\nPhysical Sciences\nICMPS 2026\n6th – 7th July 2026 | JKUAT Main Campus, Juja\n7.1 Conference Overview\nThe 2nd International Conference on Mathematics and Physical Sciences (ICMPS 2026) is a prestigious\nbiennial event hosted by the JKUAT College of Pure and Applied Sciences",
+      "Context #3:\nwill be sent by 15 June 2026.\n• Full paper submission deadline: 25 June 2026 (for inclusion in the conference proceedings).\n• Registration fee: KES 5,000 for students; KES 12,000 for faculty; USD 100 for international\nparticipants.\n• Virtual attendance option available via the JKUAT e-Conference platform for registered participants\nunable to attend physically.\nNote: For more details, visit the conference website or contact the Department of Mathematics, College of Pure and\nApplied Sciences, JKUAT Main Campus, P.O"
+    ],
+    "ground_truth": "25 June 2026. 6"
+  },
+  {
+    "id": 84,
+    "question": "What is the student registration fee for ICMPS 2026?",
+    "answer": "I don’t have enoughinformation in the provided context about the student registration fee for ICMPS 2026. Please check JKUAT’s official channels—such as the Finance Office or the JKUAT Student Portal—or contact the university directly for the most accurate and up‑to‑date fee details.",
+    "contexts": [
+      "Context #1:\n. Mathematics & Computer Sci.140,000134,000129,000126,000\nBSc. Physics132,000126,000122,000119,000\nBSc. Chemistry133,000127,000123,000120,000\nAdditional Charges (All Students — Per Semester)\nItemAmount (KES)\nRegistration Fee2,000\nStudent Union Fee1,500\nMedical / Health Fee3,500",
+      "Context #2:\nLibrary Fee1,800\nICT / Technology Fee2,500\nCaution Money (Year 1 only, refundable)5,000\nStudent ID (Year 1 only)500\nExamination Fee (per semester)4,000\nHousehold / Hostel Fee (on-campus)18,000 – 25,000\nNote: Fees are reviewed annually. Confirm the current schedule at the Finance Office or via the JKUAT Student\nPortal before making any payment.\n1.2 Postgraduate Programmes\nProgramme\nSemester 1\n(KES)\nSemester 2\n(KES)\nSemester 3\n(KES)\nMSc. Computer Science85,00080,00075,000\nMSc. Information Technology85,00080,00075,000\nMSc. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc",
+      "Context #3:\n10\nHousehold Fee Clearance Pending\nOn-campus students with outstanding household (hostel) fees may face restrictions. Settle the hostel\nfee and obtain a clearance slip from the Hostels & Accommodation Office.\nn If none of the above reasons apply and you still cannot register, proceed to the Academic\nRegistrar's Office with your student ID and fee receipt for manual assistance."
+    ],
+    "ground_truth": "KES 5,000."
+  },
+  {
+    "id": 85,
+    "question": "What is the faculty registration fee for ICMPS 2026?",
+    "answer": "I don’t have enough information about that in my knowledge base. For details on the faculty registration fee for ICMPS 2026, I recommend contacting JKUAT’s Finance Office or checking the official JKUAT website or portal.",
+    "contexts": [
+      "Context #1:\n. Mathematics & Computer Sci.140,000134,000129,000126,000\nBSc. Physics132,000126,000122,000119,000\nBSc. Chemistry133,000127,000123,000120,000\nAdditional Charges (All Students — Per Semester)\nItemAmount (KES)\nRegistration Fee2,000\nStudent Union Fee1,500\nMedical / Health Fee3,500",
+      "Context #2:\n6. Key Academic Deadlines — Quick Reference\nActivityDeadline / PeriodResponsible Office\nSession ReportingBy end of Week 1 of semesterAcademic Registrar\nUnit RegistrationBy end of Week 4 of semesterAcademic Registrar\nMinimum Fee Payment (75%)Before unit registrationFinance Office\nHousehold Fee ClearanceBefore examinations commenceHostels & Accommodation\nCATs / Continuous AssessmentsAs per Department scheduleRespective Department\nExamination PeriodAs per official timetableExaminations Office\nSupplementary Exam ApplicationsWithin 2 weeks after resultsFaculty Dean's Office\nTranscript RequestsAnytime (allow 5–10 working days)Academic Registrar",
+      "Context #3:\nLibrary Fee1,800\nICT / Technology Fee2,500\nCaution Money (Year 1 only, refundable)5,000\nStudent ID (Year 1 only)500\nExamination Fee (per semester)4,000\nHousehold / Hostel Fee (on-campus)18,000 – 25,000\nNote: Fees are reviewed annually. Confirm the current schedule at the Finance Office or via the JKUAT Student\nPortal before making any payment.\n1.2 Postgraduate Programmes\nProgramme\nSemester 1\n(KES)\nSemester 2\n(KES)\nSemester 3\n(KES)\nMSc. Computer Science85,00080,00075,000\nMSc. Information Technology85,00080,00075,000\nMSc. Electrical Engineering92,00087,00082,000\nMSc. Mathematics78,00074,00070,000\nMSc"
+    ],
+    "ground_truth": "KES 12,000."
+  }
+]
