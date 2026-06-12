@@ -192,9 +192,7 @@ def run_evaluation(dataset, llm, embeddings):
     # Import the new metric classes (not the deprecated functions)
     from ragas.metrics import (
         Faithfulness,
-        ResponseRelevancy,
         ContextRecall,
-        AnswerCorrectness,
     )
     from ragas.llms import LangchainLLMWrapper
     from ragas.embeddings import LangchainEmbeddingsWrapper
@@ -202,12 +200,12 @@ def run_evaluation(dataset, llm, embeddings):
     ragas_llm = LangchainLLMWrapper(llm)
     ragas_embeddings = LangchainEmbeddingsWrapper(embeddings)
 
-    # Define metrics with strictness=1 to avoid n=3 requests from Groq
+    # Use only 2 token-efficient metrics to avoid Groq rate limits
+    # - Faithfulness: answers grounded in context
+    # - ContextRecall: all needed info retrieved
     metrics = [
         Faithfulness(),
-        ResponseRelevancy(strictness=1),  # Only 1 generation, not 3
         ContextRecall(),
-        AnswerCorrectness(),
     ]
 
     print(f"\nRunning evaluation on {len(dataset)} samples (one at a time)...")
@@ -242,6 +240,7 @@ def run_evaluation(dataset, llm, embeddings):
 def combine_results(results_list, total_samples):
     """Combine multiple evaluation results into one aggregated result."""
     import pandas as pd
+    import numpy as np
 
     all_scores = []
     for result in results_list:
@@ -256,7 +255,15 @@ def combine_results(results_list, total_samples):
 
     aggregated_scores = {}
     for col in df.columns:
-        aggregated_scores[col] = df[col].mean()
+        try:
+            # Try to convert column to numeric and compute mean
+            numeric_col = pd.to_numeric(df[col], errors='coerce')
+            # Only include columns with numeric values (not all NaN)
+            if numeric_col.notna().any():
+                aggregated_scores[col] = numeric_col.mean()
+        except (TypeError, ValueError):
+            # Skip columns with non-numeric data (like dicts)
+            pass
 
     class MockResult:
         def __init__(self, scores, df):
@@ -302,10 +309,8 @@ def save_results(results, raw_data: list[dict]):
     ]
 
     metric_descriptions = {
-        "faithfulness":       "Faithfulness       (answer grounded in context?)",
-        "answer_relevancy":   "Answer Relevancy   (answer addresses question?)",
-        "context_recall":     "Context Recall     (all needed info retrieved?)",
-        "answer_correctness": "Answer Correctness (factually correct vs GT?)",
+        "faithfulness":   "Faithfulness   (answer grounded in context?)",
+        "context_recall": "Context Recall (all needed info retrieved?)",
     }
 
     for key, label in metric_descriptions.items():
