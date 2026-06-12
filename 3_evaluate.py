@@ -9,7 +9,7 @@ Usage:
 
 Metrics computed:
   - Faithfulness       : Is the answer grounded in the retrieved context?
-  - Answer Relevancy   : Does the answer address the question?
+  - Answer Relevancy   : Does the answer address the question? (strictness=1 for Groq)
   - Context Recall     : Was all needed info retrieved?
   - Answer Correctness : Is the answer factually correct vs ground truth?
 """
@@ -21,6 +21,7 @@ import time
 
 
 def load_dotenv(dotenv_path=".env"):
+    """Load environment variables from .env file if it exists."""
     if not os.path.exists(dotenv_path):
         return
 
@@ -48,13 +49,13 @@ RESULTS_REPORT    = "ragas_report.txt"
 GROQ_API_KEY      = os.getenv("GROQ_API_KEY", "")
 GROQ_MODEL        = "llama-3.3-70b-versatile"
 GROQ_BASE_URL     = "https://api.groq.com/openai/v1"
-BATCH_SIZE        = 3          # Small batch to avoid rate limits
-REQUEST_DELAY     = 5          # Seconds between requests
-MAX_RETRIES       = 3          # Retry failed requests
+REQUEST_DELAY     = 180          # Seconds between requests (increased for stability)
+MAX_RETRIES       = 3           # Retry failed requests
 # ────────────────────────────────────────────────────────────────────────────
 
 
 def check_dependencies():
+    """Check if all required packages are installed."""
     missing = []
     for pkg in ["ragas", "datasets", "openai", "langchain_openai"]:
         try:
@@ -82,8 +83,8 @@ def build_groq_llm():
         base_url=GROQ_BASE_URL,
         temperature=0,
         max_retries=MAX_RETRIES,
-        timeout=60,
-        default_headers={"groq-n": "1"},  # Force n=1 parameter
+        timeout=300,  # Increased from 60 to 300 seconds
+        default_headers={"groq-n": "1"},
     )
 
 
@@ -110,10 +111,10 @@ def build_groq_embeddings():
 
 
 def load_rag_outputs(path: str) -> list[dict]:
+    """Load RAG outputs from JSON file and filter out empty answers."""
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    # Filter out failed queries (empty answers)
     valid = [d for d in data if d.get("answer", "").strip()]
     skipped = len(data) - len(valid)
     if skipped:
@@ -148,21 +149,18 @@ def build_ragas_dataset(data: list[dict]):
 def run_evaluation_single_sample(sample, metrics, ragas_llm, ragas_embeddings, sample_idx, total):
     """
     Run evaluation on a single sample with retry logic.
-    Returns dict of metric scores or None if failed.
+    Returns evaluation result or None if failed.
     """
     from ragas import evaluate
     from ragas import EvaluationDataset
 
-    # Create a dataset with just this sample
     single_dataset = EvaluationDataset(samples=[sample])
 
-    # Attach LLM and embeddings to metrics
     for metric in metrics:
         metric.llm = ragas_llm
         if hasattr(metric, "embeddings"):
             metric.embeddings = ragas_embeddings
 
-    # Retry logic
     for attempt in range(MAX_RETRIES):
         try:
             result = evaluate(dataset=single_dataset, metrics=metrics)
@@ -171,12 +169,14 @@ def run_evaluation_single_sample(sample, metrics, ragas_llm, ragas_embeddings, s
         except Exception as e:
             error_msg = str(e)
             if "n' : number must be at most 1" in error_msg:
-                # This is a known Groq limitation, continue
                 print(f"  ⚠️ Sample {sample_idx}/{total}: Groq n=1 limit, retrying...")
             elif "timeout" in error_msg.lower():
                 print(f"  ⚠️ Sample {sample_idx}/{total}: Timeout, retrying ({attempt+1}/{MAX_RETRIES})...")
             elif "connection" in error_msg.lower():
                 print(f"  ⚠️ Sample {sample_idx}/{total}: Connection error, retrying ({attempt+1}/{MAX_RETRIES})...")
+            elif "rate limit" in error_msg.lower():
+                print(f"  ⚠️ Sample {sample_idx}/{total}: Rate limit, waiting 60s...")
+                time.sleep(60)
             else:
                 print(f"  ⚠️ Sample {sample_idx}/{total}: {error_msg[:100]}")
             
@@ -189,29 +189,29 @@ def run_evaluation_single_sample(sample, metrics, ragas_llm, ragas_embeddings, s
 
 def run_evaluation(dataset, llm, embeddings):
     """Run RAGAS metrics one sample at a time to avoid rate limits."""
+    # Import the new metric classes (not the deprecated functions)
     from ragas.metrics import (
-        faithfulness,
-        answer_relevancy,
-        context_recall,
-        answer_correctness,
+        Faithfulness,
+        ResponseRelevancy,
+        ContextRecall,
+        AnswerCorrectness,
     )
     from ragas.llms import LangchainLLMWrapper
     from ragas.embeddings import LangchainEmbeddingsWrapper
 
-    # Wrap LangChain objects for RAGAS once
     ragas_llm = LangchainLLMWrapper(llm)
     ragas_embeddings = LangchainEmbeddingsWrapper(embeddings)
 
-    # Define metrics
+    # Define metrics with strictness=1 to avoid n=3 requests from Groq
     metrics = [
-        faithfulness,
-        answer_relevancy,
-        context_recall,
-        answer_correctness,
+        Faithfulness(),
+        ResponseRelevancy(strictness=1),  # Only 1 generation, not 3
+        ContextRecall(),
+        AnswerCorrectness(),
     ]
 
     print(f"\nRunning evaluation on {len(dataset)} samples (one at a time)...")
-    print(f"Metrics: {[m.name for m in metrics]}\n")
+    print(f"Metrics: {[type(m).__name__ for m in metrics]}\n")
 
     all_results = []
     total = len(dataset)
@@ -224,22 +224,15 @@ def run_evaluation(dataset, llm, embeddings):
             sample, metrics, ragas_llm, ragas_embeddings, idx, total
         )
 
-        if result is not None:
-            all_results.append(result)
-        else:
-            # Append None as placeholder for failed sample
-            all_results.append(None)
+        all_results.append(result)
 
-        # Delay between samples to avoid rate limits
         if idx < total:
             print(f"  Waiting {REQUEST_DELAY} seconds before next sample...")
             time.sleep(REQUEST_DELAY)
 
-    # Filter out failed results for aggregation
     successful = [r for r in all_results if r is not None]
     print(f"\n✅ Successfully evaluated {len(successful)}/{total} samples")
 
-    # Return successful results for aggregation
     if successful:
         return combine_results(successful, total)
     else:
@@ -247,12 +240,9 @@ def run_evaluation(dataset, llm, embeddings):
 
 
 def combine_results(results_list, total_samples):
-    """
-    Combine multiple evaluation results into one aggregated result.
-    """
+    """Combine multiple evaluation results into one aggregated result."""
     import pandas as pd
 
-    # Collect all score dictionaries
     all_scores = []
     for result in results_list:
         if result is not None:
@@ -262,15 +252,12 @@ def combine_results(results_list, total_samples):
     if not all_scores:
         return None
 
-    # Create DataFrame from all scores
     df = pd.DataFrame(all_scores)
 
-    # Calculate mean scores
     aggregated_scores = {}
     for col in df.columns:
         aggregated_scores[col] = df[col].mean()
 
-    # Create a mock result object
     class MockResult:
         def __init__(self, scores, df):
             self.scores = scores
@@ -287,7 +274,6 @@ def save_results(results, raw_data: list[dict]):
         print("No results to save.")
         return
 
-    # Save full results as JSON
     try:
         results_df = results.to_pandas()
         results_dict = results_df.to_dict(orient="records")
@@ -298,7 +284,6 @@ def save_results(results, raw_data: list[dict]):
         print(f"Warning: Could not save JSON results: {e}")
         results_dict = []
 
-    # Build text report
     scores = results.scores if hasattr(results, 'scores') else {}
 
     report_lines = [
