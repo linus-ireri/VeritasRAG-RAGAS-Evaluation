@@ -20,11 +20,11 @@
   total records: 25
   aggregates:
     faithfulness: mean=0.7973, valid=25/25 |███████████████     |
-    answer_relevancy: N/A, valid=0/0
+   
     context_recall: mean=0.7200, valid=25/25 |██████████████      |
-    answer_correctness: N/A, valid=0/0
+    
 
 ============================================================
 NOTE: This report is generated from ragas_results.json and ragas_results2.json.
-      No evaluation rerun was performed.
+      No evaluation rerun was performed. A new evaluation will yield a new .txt report file.
 ============================================================
