@@ -1,0 +1,30 @@
+============================================================
+  RAGAS EVALUATION REPORT — Combined JSON Summary
+  JKUAT Institutional Knowledge Base
+============================================================
+  Source files: ragas_results.json, ragas_results2.json
+
+============================================================
+  FILE: ragas_results.json
+  status: loaded
+  total records: 25
+  aggregates:
+    faithfulness: N/A, valid=0/25
+    answer_relevancy: mean=0.9406, valid=6/25 |██████████████████  |
+    context_recall: mean=0.8333, valid=6/25 |████████████████    |
+    answer_correctness: N/A, valid=0/25
+
+============================================================
+  FILE: ragas_results2.json
+  status: loaded
+  total records: 25
+  aggregates:
+    faithfulness: mean=0.7973, valid=25/25 |███████████████     |
+    answer_relevancy: N/A, valid=0/0
+    context_recall: mean=0.7200, valid=25/25 |██████████████      |
+    answer_correctness: N/A, valid=0/0
+
+============================================================
+NOTE: This report is generated from ragas_results.json and ragas_results2.json.
+      No evaluation rerun was performed.
+============================================================

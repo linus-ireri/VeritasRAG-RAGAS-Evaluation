@@ -242,11 +242,20 @@ def combine_results(results_list, total_samples):
     import pandas as pd
     import numpy as np
 
+    def normalize_scores(raw_scores):
+        if isinstance(raw_scores, dict) and len(raw_scores) == 1:
+            inner = next(iter(raw_scores.values()))
+            if isinstance(inner, dict):
+                return inner
+        return raw_scores
+
     all_scores = []
     for result in results_list:
         if result is not None:
             scores = result.scores if hasattr(result, 'scores') else {}
-            all_scores.append(scores)
+            scores = normalize_scores(scores)
+            if isinstance(scores, dict):
+                all_scores.append(scores)
 
     if not all_scores:
         return None
@@ -256,13 +265,10 @@ def combine_results(results_list, total_samples):
     aggregated_scores = {}
     for col in df.columns:
         try:
-            # Try to convert column to numeric and compute mean
             numeric_col = pd.to_numeric(df[col], errors='coerce')
-            # Only include columns with numeric values (not all NaN)
             if numeric_col.notna().any():
                 aggregated_scores[col] = numeric_col.mean()
         except (TypeError, ValueError):
-            # Skip columns with non-numeric data (like dicts)
             pass
 
     class MockResult:
@@ -283,7 +289,31 @@ def save_results(results, raw_data: list[dict]):
 
     try:
         results_df = results.to_pandas()
-        results_dict = results_df.to_dict(orient="records")
+        metrics_list = results_df.to_dict(orient="records")
+
+        # Flatten nested metric dictionaries if present
+        flattened_metrics = []
+        for record in metrics_list:
+            if isinstance(record, dict) and len(record) == 1:
+                inner = next(iter(record.values()))
+                if isinstance(inner, dict):
+                    flattened_metrics.append(inner)
+                    continue
+            flattened_metrics.append(record)
+
+        # Merge metrics back into raw_data to preserve full sample records
+        # (question, contexts, response, reference + metrics)
+        merged_results = []
+        for idx, raw_sample in enumerate(raw_data):
+            merged_record = dict(raw_sample)  # Start with full original record
+            if idx < len(flattened_metrics):
+                # Add metric scores from evaluation
+                metric_scores = flattened_metrics[idx]
+                if isinstance(metric_scores, dict):
+                    merged_record.update(metric_scores)
+            merged_results.append(merged_record)
+
+        results_dict = merged_results
 
         with open(RESULTS_JSON, "w", encoding="utf-8") as f:
             json.dump(results_dict, f, indent=2, ensure_ascii=False)
@@ -291,7 +321,23 @@ def save_results(results, raw_data: list[dict]):
         print(f"Warning: Could not save JSON results: {e}")
         results_dict = []
 
+    def normalize_scores(raw_scores):
+        if isinstance(raw_scores, dict) and len(raw_scores) == 1:
+            inner = next(iter(raw_scores.values()))
+            if isinstance(inner, dict):
+                return inner
+        return raw_scores
+
     scores = results.scores if hasattr(results, 'scores') else {}
+    scores = normalize_scores(scores) if isinstance(scores, dict) else scores
+
+    if not scores and results_dict:
+        # Fall back to computing aggregate scores from the DataFrame.
+        scores = {}
+        for col in results_df.columns:
+            numeric_col = pd.to_numeric(results_df[col], errors='coerce')
+            if numeric_col.notna().any():
+                scores[col] = numeric_col.mean()
 
     report_lines = [
         "=" * 60,
