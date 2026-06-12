@@ -1,10 +1,10 @@
 # JKUAT-RAGAS Evaluation Suite
 
-This repository implements an end-to-end evaluation workflow for the Veritas RAG system using a custom question set and RAGAS metrics.
+This repository implements an end-to-end evaluation workflow for the Veritas RAG system using a custom question set and RAGAS metrics, with interactive dashboard visualization.
 
 ## Project Overview
 
-The project contains three main steps:
+The project contains three main evaluation steps plus a dashboard:
 
 1. `1_parse_questions.py`
    - Parses selected questions and ground truth answers from `Veritas_Project_Evaluation_dataset.pdf`
@@ -17,8 +17,13 @@ The project contains three main steps:
 3. `3_evaluate.py`
    - Loads the RAG output JSON
    - Computes RAGAS evaluation metrics using Groq's OpenAI-compatible API
-   - Writes aggregated JSON results to `ragas_results.json`
+   - Writes full per-sample records to `ragas_results.json` (question, contexts, response, reference + all metric scores)
    - Writes a human-readable report to `ragas_report.txt`
+
+4. `dashboard.py` (optional)
+   - Interactive Streamlit dashboard for visualizing aggregated metrics and per-sample results
+   - Displays metric summaries, bar charts, and detailed sample tables
+   - Supports filtering and row selection
 
 ## Files in this repository
 
@@ -28,16 +33,19 @@ The project contains three main steps:
 - `2_query_rag.js` — queries the RAG server and saves server responses
 - `rag_outputs.json` — RAG server outputs with question, answer, context, and ground truth
 - `3_evaluate.py` — evaluates outputs using RAGAS metrics and Groq
-- `ragas_results.json` — aggregated evaluation results
+- `dashboard.py` — Streamlit dashboard for visualization
+- `ragas_results.json` — full per-sample evaluation results (generated)
+- `ragas_report.txt` — human-readable evaluation report (generated)
 - `evaluation_summary.json` — additional result summary data (if present)
 - `package.json` — config file for Node.js module type
+- `requirements.txt` — Python dependencies for dashboard and evaluation
 
 ## Requirements
 
 ### Python
 
 - Python 3.10+ recommended
-- Required Python packages:
+- Required Python packages (see `requirements.txt`):
   - `pypdf`
   - `ragas`
   - `datasets`
@@ -46,6 +54,8 @@ The project contains three main steps:
   - `langchain_community`
   - `sentence-transformers`
   - `pandas`
+  - `numpy`
+  - `streamlit` (for dashboard)
 
 The `3_evaluate.py` script will automatically load values from `.env` if present.
 
@@ -56,17 +66,23 @@ The `3_evaluate.py` script will automatically load values from `.env` if present
 
 ## Setup
 
-1. Copy `.env.example` to `.env` in the project root:
+1. Install Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Copy `.env.example` to `.env` in the project root:
 
 ```bash
 cp .env.example .env
 ```
 
-2. Add your Groq API key and optional Hugging Face token to `.env`.
+3. Add your Groq API key and optional Hugging Face token to `.env`.
 
-3. If you prefer not to use `.env`, export the same values as environment variables before running the evaluation script.
+4. If you prefer not to use `.env`, export the same values as environment variables before running the evaluation script.
 
-4. Do not commit `.env` to GitHub. This repository includes `.gitignore` to ignore `.env`.
+5. Do not commit `.env` to GitHub. This repository includes `.gitignore` to ignore `.env`.
 
 ## Usage
 
@@ -96,8 +112,51 @@ python3 3_evaluate.py
 
 This produces:
 
-- `ragas_results.json`
-- `ragas_report.txt`
+- `ragas_results.json` — contains full per-sample records with all metrics
+- `ragas_report.txt` — human-readable summary report
+
+### Step 4: View results on the dashboard (optional)
+
+```bash
+streamlit run dashboard.py
+```
+
+This launches an interactive dashboard showing:
+- Aggregate metric scores with visual progress bars
+- Bar chart of mean metric values
+- Detailed per-sample table with filtering options
+- Full question, response, contexts, and metrics for each sample
+
+## Evaluation Metrics
+
+The evaluation uses two core RAGAS metrics (token-efficient for Groq API):
+
+- **Faithfulness** — Is the answer grounded in the retrieved context?
+- **Context Recall** — Were all needed information contexts retrieved?
+
+(Previous runs may also include Answer Relevancy and Answer Correctness where available.)
+
+## Output Format
+
+`ragas_results.json` now contains full per-sample records:
+
+```json
+[
+  {
+    "question": "What is the Year 1 tuition fee for BSc Computer Science?",
+    "retrieved_contexts": ["Context #1...", "Context #2..."],
+    "response": "The Year 1 tuition fee is KES 148,000...",
+    "reference": "KES 148,000.",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.9896,
+    "context_recall": 1.0,
+    "answer_correctness": NaN
+  },
+  ...
+]
+```
+
+Each record includes the original RAG output plus computed metric scores.
 
 ## Environment Variables
 
